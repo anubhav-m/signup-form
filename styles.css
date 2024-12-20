@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Dark theme */
+:root.dark { 
+    --background-gif: url(./resources/dark-mode-bg.gif);
+    --main-container-bg: rgba(0, 0, 0, 0.5); /* Dark tint for background */
+    --backdrop-filter: blur(10px); /* Apply blur effect */
+    --border-color: rgba(255, 255, 255, 0.5); /* Light border for contrast */
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.4); /* Dark shadow */
+}
+
+/* Light theme */
+:root.light {
+    --background-gif: url(./resources/white-mode-bg.jpg);
+    --main-container-bg: rgba(255, 255, 255, 0.3); /* Light tint for background */
+    --backdrop-filter: blur(10px); /* Apply blur effect */
+    --border-color: rgba(0, 0, 0, 0.5); /* Dark border for contrast */
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+
+body{
+    height: 100vh;
+    background: var(--background-gif);
+    background-size: auto 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transition: background 0.3s ease; */
+}
+
+.dark-toggle{
+    color: white;
+}
+
+.light-toggle{
+    color: yellow;
+    
+}
+
+.dark-toggle:hover, .light-toggle:hover{
+    transform: scale(1.05);
+}
+
+
+.toggle{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#main-container{
+    height: 60vh;
+    width: 25vw;
+    background: var(--main-container-bg); /* Use the custom background tint */
+    backdrop-filter: var(--backdrop-filter); /* Apply the custom blur */
+    border: 1px solid var(--border-color); /* Use the custom border color */
+    border-radius: 15px;
+    box-shadow: var(--box-shadow); /* Use the custom shadow */
+    transition: all 0.3s ease;
+}
+
+
+#main-container:hover, #main-container:focus{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7), 0 10px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
