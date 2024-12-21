@@ -219,3 +219,25 @@ a{
 a:hover{
     text-decoration: underline;
 }
+
+@media (max-width: 480px){
+    *{
+        overflow: hidden;
+    }
+
+    #main-container{
+        width: 350px;
+    }
+
+    form{
+        width: 350px;
+    }
+
+    input{
+        width: 200px;
+    }
+
+    .signup-text {
+        font-size: 0.9rem; 
+    }
+}
