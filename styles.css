@@ -43,7 +43,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* transition: background 0.3s ease; */
 }
 
 .dark-toggle{
@@ -71,7 +70,7 @@ body{
 }
 
 #main-container{
-    height: 550px;
+    height: 600px;
     width: 400px;
     background: var(--main-container-bg); /* Use the custom background tint */
     backdrop-filter: var(--backdrop-filter); /* Apply the custom blur */
@@ -87,12 +86,8 @@ body{
     
 }
 
-h1{
-    text-align: center;
-}
-
 form{
-    height: 550px;
+    height: 600px;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -119,6 +114,7 @@ input::placeholder{
     justify-content: center;
     margin: 40px 0 0 0;
     font-family: 'Press Start 2P', cursive;
+    text-align: center;
 }
 
 fieldset{
@@ -184,4 +180,5 @@ input:focus{
 .last-line{
     font-size: 1rem;
     font-weight: 700;
+    margin: 0 0 20px 0;
 }
