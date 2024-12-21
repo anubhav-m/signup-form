@@ -18,6 +18,8 @@
     --default-underline-color: white;
     --selected-underline-color: blue;
     --input-text-color: white;
+    --valid-underline-color: lightgreen;
+    --invalid-underline-color: red;
 }
 
 /* Light theme */
@@ -33,6 +35,8 @@
     --default-underline-color: black;
     --selected-underline-color: blue;
     --input-text-color: black;
+    --valid-underline-color: darkgreen;
+    --invalid-underline-color: red;
 }
 
 
@@ -71,7 +75,7 @@ body{
 
 #main-container{
     height: 600px;
-    width: 400px;
+    width: 450px;
     background: var(--main-container-bg); /* Use the custom background tint */
     backdrop-filter: var(--backdrop-filter); /* Apply the custom blur */
     border: 1px solid var(--border-color); /* Use the custom border color */
@@ -88,7 +92,7 @@ body{
 
 form{
     height: 600px;
-    width: 400px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,7 +125,7 @@ fieldset{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;  
+    gap: 10px;
 }
 
 svg{
@@ -131,7 +135,7 @@ svg{
 
 input{
     height: 30px;
-    width: 250px;
+    width: 300px;
     border-radius: 5px;
     padding: 5px 12px;
     background: none;
@@ -147,6 +151,16 @@ input:focus{
     outline: none;
     border-bottom: 2px solid var(--selected-underline-color);
 }
+
+input:valid{
+    outline: none;
+    border-bottom: 2px solid var(--valid-underline-color);
+}
+
+input:invalid.invalid-toggler{
+    outline: none;
+    border-bottom: 2px solid var(--invalid-underline-color);
+} 
 
 .submit-button-div{
     display: flex;
@@ -177,8 +191,31 @@ input:focus{
     gap: 20px;
 }
 
-.last-line{
+.google, .facebook{
+    transition: all 0.3s ease;
+}
+
+.google:hover, .facebook:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.signin-line{
     font-size: 1rem;
     font-weight: 700;
     margin: 0 0 20px 0;
+    color: var(--accent-color);
+}
+
+a, a:hover{
+    cursor: pointer;
+    color: inherit;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }

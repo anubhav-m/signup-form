@@ -25,3 +25,8 @@ function setTheme() {
 // Add a click event listener to both toggle buttons
 darkToggle.addEventListener('click', setTheme);
 lightToggle.addEventListener('click', setTheme);
+
+
+document.querySelector("#submit").addEventListener("click", ()=>{
+    document.querySelectorAll("input").forEach((element)=>{element.classList.add("invalid-toggler")});
+});
