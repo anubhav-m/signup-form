@@ -29,13 +29,13 @@
     --backdrop-filter: blur(10px); /* Apply blur effect */
     --border-color: rgba(0, 0, 0, 0.5); /* Dark border for contrast */
     --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
-    --accent-color: black ;
+    --accent-color: #000080 ;
     --placeholder-text-color: #333333;
-    --submit-button-text-color: white;
+    --submit-button-text-color: white;  
     --default-underline-color: black;
-    --selected-underline-color: blue;
+    --selected-underline-color: #FF8C00;
     --input-text-color: black;
-    --valid-underline-color: darkgreen;
+    --valid-underline-color: #3CB371;
     --invalid-underline-color: red;
 }
 
