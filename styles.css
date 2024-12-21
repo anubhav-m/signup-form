@@ -8,19 +8,31 @@
 /* Dark theme */
 :root.dark { 
     --background-gif: url(./resources/dark-mode-bg.gif);
-    --main-container-bg: rgba(0, 0, 0, 0.5); /* Dark tint for background */
+    --main-container-bg: rgba(0, 0, 0, 0.75); /* Dark tint for background */
     --backdrop-filter: blur(10px); /* Apply blur effect */
     --border-color: rgba(255, 255, 255, 0.5); /* Light border for contrast */
     --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.4); /* Dark shadow */
+    --accent-color: #FF4081;
+    --placeholder-text-color: #aaa;
+    --submit-button-text-color: black;
+    --default-underline-color: white;
+    --selected-underline-color: blue;
+    --input-text-color: white;
 }
 
 /* Light theme */
 :root.light {
     --background-gif: url(./resources/white-mode-bg.jpg);
-    --main-container-bg: rgba(255, 255, 255, 0.3); /* Light tint for background */
+    --main-container-bg: rgba(255, 255, 255, 0.7); /* Light tint for background */
     --backdrop-filter: blur(10px); /* Apply blur effect */
     --border-color: rgba(0, 0, 0, 0.5); /* Dark border for contrast */
     --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    --accent-color: black ;
+    --placeholder-text-color: #333333;
+    --submit-button-text-color: white;
+    --default-underline-color: black;
+    --selected-underline-color: blue;
+    --input-text-color: black;
 }
 
 
@@ -72,7 +84,7 @@ body{
 
 #main-container:hover, #main-container:focus{
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7), 0 10px 15px rgba(0, 0, 0, 0.5);
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    
 }
 
 h1{
@@ -86,13 +98,90 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+}
+
+.signup-text, svg, #submit, .last-line{
+    color: var(--accent-color);
+}
+
+input::placeholder{
+    color: var(--placeholder-text-color);
+}
+
+.mc-item{
+    flex: 1;
+}
+
+.signup-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 0 0;
+    font-family: 'Press Start 2P', cursive;
 }
 
 fieldset{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  
 }
 
 svg{
-    height:20px;
-    width:20px;
+    height:30px;
+    width:30px;
+}
+
+input{
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    padding: 5px 12px;
+    background: none;
+    font-size: 1rem;
+    border-bottom: 2px solid var(--default-underline-color);
+    font-family: sans-serif;
+    appearance: none;
+    color: var(--input-text-color);
+    transition: all 0.3s ease;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid var(--selected-underline-color);
+}
+
+.submit-button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit{
+    font-size: 1rem;
+    padding: 8px 50px;
+    border-radius: 10px;
+    font-weight: 500;
+    background: none;
+    border: 2px solid var(--accent-color);
+}
+
+#submit:hover, #submit:focus{
+    outline: none;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: var(--submit-button-text-color);
+}
+
+.external-auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.last-line{
+    font-size: 1rem;
+    font-weight: 700;
 }
