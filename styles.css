@@ -12,7 +12,7 @@
     --backdrop-filter: blur(10px); /* Apply blur effect */
     --border-color: rgba(255, 255, 255, 0.5); /* Light border for contrast */
     --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.4); /* Dark shadow */
-    --accent-color: #FF4081;
+    --primary-color: #FF4081;
     --placeholder-text-color: #aaa;
     --submit-button-text-color: black;
     --default-underline-color: white;
@@ -29,7 +29,7 @@
     --backdrop-filter: blur(10px); /* Apply blur effect */
     --border-color: rgba(0, 0, 0, 0.5); /* Dark border for contrast */
     --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
-    --accent-color: #000080 ;
+    --primary-color: #000080 ;
     --placeholder-text-color: #333333;
     --submit-button-text-color: white;  
     --default-underline-color: black;
@@ -101,7 +101,7 @@ form{
 }
 
 .signup-text, svg, #submit, .last-line{
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 input::placeholder{
@@ -157,10 +157,10 @@ input:valid{
     border-bottom: 2px solid var(--valid-underline-color);
 }
 
-input:invalid.invalid-toggler{
+input:user-invalid{
     outline: none;
     border-bottom: 2px solid var(--invalid-underline-color);
-} 
+}
 
 .submit-button-div{
     display: flex;
@@ -174,13 +174,13 @@ input:invalid.invalid-toggler{
     border-radius: 10px;
     font-weight: 500;
     background: none;
-    border: 2px solid var(--accent-color);
+    border: 2px solid var(--primary-color);
 }
 
 #submit:hover, #submit:focus{
     outline: none;
     cursor: pointer;
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     color: var(--submit-button-text-color);
 }
 
@@ -204,7 +204,7 @@ input:invalid.invalid-toggler{
     font-size: 1rem;
     font-weight: 700;
     margin: 0 0 20px 0;
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 a, a:hover{
